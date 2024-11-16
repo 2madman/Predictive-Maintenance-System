@@ -1,0 +1,6 @@
+Some warning,minor and unknown logs in a row
+Same event in short timeframe
+Decrease in normal event 
+Unknown after warning or minor events 
+Sudden increase in warning or minor
+Status problem olursa sıkıntı root privelege kazananlar olabilir
