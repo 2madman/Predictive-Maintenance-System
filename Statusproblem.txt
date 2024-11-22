@@ -1,0 +1,386 @@
+15th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Normal
+category       : Windows PowerShell
+source         : EFEM_Agent
+node           : BasakKarakas-Windows PowerShell (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : 36265cb451484cdfa0cc83cbf7b4d5de
+subcategory    : Windows PowerShell (Event Log)
+eti_type       : Engine Lifecycle
+eti_value      : 4
+monitor_uuid   : 210358705
+severity_id    : 10
+information    : Engine state is changed from Available to Stopped. Details: NewEngineState=StoppedPreviousEngineState=AvailableSequenceNumber=16HostName=ConsoleHostHostVersion=5.1.22621.2428HostId=20157b7c-3eff-4959-9b08-7febe7519969HostApplication=powershell.exe -c Invoke-WebRequest -Uri https://slackb.com/error -Method POST -Headers @{"X-Slack-Ses-Id" = "ebfbacf0-b248-498e-8301-1496b2c7de8d"; "Content-Type" 
+= "application/json"; "User-Agent" = "Mozilla/5.0 (Windows NT 10.0.22621; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Slack/4.34.121 Chrome/116.0.5845.190 Electron/26.2.4 Safari/537.36 OS_Product/Workstation Servicing_Channel/SAC Sonic Slack_SSB/4.34.121"; "Content-Length" = "55"; } -Body "{label:slack_com,reason:SSB connection failure}" -UseBasicParsing | Select-Object -Property StatusCode,Content | ConvertTo-JsonEngineVersion=5.1.22621.2428RunspaceId=6f95c2dc-4e11-4e33-b159-13c3e27473c3PipelineId=CommandName=CommandType=ScriptName=CommandPath=CommandLine=
+occurance      : 1
+update_date    : 2024-04-23 01:32:28.000
+alert_name     : Engine state is changed from Available to Stopped.
+
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+14th before:
+event_id       : b2a5958b3bb34c20ae559e463b163c38
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : EFEM_SERVER-Security (Event Log)-10.1.18.126
+creation_date  : 2024-04-16 12:50:03.000
+node_id        : 3e5452aa6d0c40d98b4af4ee7ce256e8
+subcategory    : Security (Event Log)
+eti_type       : Audit Policy Change
+eti_value      : 13568
+monitor_uuid   : 1342429122
+severity_id    : 10
+information    : Nesnenin denetim ayarları değiştirildi.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:GIZBIL-EFEM$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Nesne:Nesne Sunucusu:SecurityNesne Türü:FileNesne Adı:C:\$WinREAgent\Scratch\Mount\Windows\WinSxS\amd64_windows-staterepository_31bf3856ad364e35_10.0.22621.1_none_5e4621a5bcd5fd49\Windows.StateRepositoryBroker.dllTanıtıcı Kimliği:0xc88İşlem Bilgileri:İşlem Kimliği:0x2f8İşlem Adı:C:\Windows\UUS\Packages\Preview\amd64\wuaucltcore.exeDenetim Ayarları:Özgün Güvenlik Tanımlayıcısı:Yeni Güvenlik Tanımlayıcısı:S:ARAI(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+occurance      : 2
+update_date    : 2024-04-22 16:00:04.000
+alert_name     : Nesnenin denetim ayarları değiştirildi.
+
+ip             : 10.1.18.126
+dns            :
+mac_address    :
+correlation    :
+
+
+13th before:
+event_id       : b2a5958b3bb34c20ae559e463b163c38
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : EFEM_SERVER-Security (Event Log)-10.1.18.126
+creation_date  : 2024-04-16 12:50:03.000
+node_id        : 3e5452aa6d0c40d98b4af4ee7ce256e8
+subcategory    : Security (Event Log)
+eti_type       : Audit Policy Change
+eti_value      : 13568
+monitor_uuid   : 1342429122
+severity_id    : 10
+information    : Nesnenin denetim ayarları değiştirildi.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:GIZBIL-EFEM$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Nesne:Nesne Sunucusu:SecurityNesne Türü:FileNesne Adı:C:\$WinREAgent\Scratch\Mount\Windows\WinSxS\amd64_windows-staterepository_31bf3856ad364e35_10.0.22621.1_none_5e4621a5bcd5fd49\Windows.StateRepositoryUpgrade.dllTanıtıcı Kimliği:0xc88İşlem Bilgileri:İşlem Kimliği:0x2f8İşlem Adı:C:\Windows\UUS\Packages\Preview\amd64\wuaucltcore.exeDenetim Ayarları:Özgün Güvenlik Tanımlayıcısı:Yeni Güvenlik Tanımlayıcısı:S:ARAI(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+occurance      : 2
+update_date    : 2024-04-22 16:00:29.000
+alert_name     : Nesnenin denetim ayarları değiştirildi.
+
+ip             : 10.1.18.126
+dns            :
+mac_address    :
+correlation    :
+
+12th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : BasakKarakas-Security (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : 97a2e291b3d1429d8f85f91b4fa464b5
+subcategory    : Security (Event Log)
+eti_type       : Logon
+eti_value      : 12544
+monitor_uuid   : 210358705
+severity_id    : 10
+information    : Bir hesapta başarılı bir şekilde oturum açıldı.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:DESKTOP-6GF7IAS$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Oturum Açma Bilgileri:Oturum Açma Türü:5Kısıtlanmış Yönetici Modu:-Uzak Credential Guard:-Sanal Hesap:HayırYükseltilmiş Belirteç:EvetKimliğe Bürünme Düzeyi:Kimliğe BürünmeYeni Oturum:Güvenlik Kimliği:S-1-5-18Hesap Adı:SYSTEMHesap Etki Alanı:NT AUTHORITYOturum Açma Kimliği:0x3E7Bağlantılı Oturum Açma Kimliği:0x0Ağ Hesap Adı:-Ağ Hesap Etki Alanı:-Oturum Açma GUID"si:{00000000-0000-0000-0000-000000000000}İşlem Bilgileri:İşlem Kimliği:0x2ecİşlem Adı:C:\Windows\System32\services.exeAğ Bilgileri:İş İstasyonu Adı:-Kaynak Ağ Adresi:-Kaynak Bağlantı Noktası:-Ayrıntılı Kimlik Doğrulama Bilgileri:Oturum Açma İşlemi:Advapi  Kimlik Doğrulama Paketi:NegotiateAktarılan Hizmetler:-Paket Adı (yalnızca NTLM):-Anahtar Uzunluğu:0Bu olay bir oturum açıldığında oluşturulur. Erişilen bilgisayarda oluşturulur.Konu alanları oturum açmayı isteyen yerel sistemdeki hesabı belirtir. Bu genellikle Sunucu hizmeti gibi bir hizmet ya da Winlogon.exe veya Services.exe gibi yerel bir işlemdir.Oturum Türü alanı gerçekleşen oturum açma türünü gösterir. En çok kullanılan türler 2 (etkileşimli) ve 3"tür (ağ).Yeni Oturum alanları adına yeni oturum oluşturulan hesabı, yani oturum açılan hesabı gösterir.Ağ alanları uzaktan oturum açma isteğinin kaynağını gösterir. İş istasyonu adı her zaman yoktur ve bazı durumlarda boş olabilir.Kimliğe bürünme düzeyi alanı oturum açma oturumundaki işlemin kimliğe bürünebilme boyutunu gösterir.Kimlik doğrulama bilgisi alanları bu oturum açma isteğine özel ayrıntılı bilgiler sağlar.- Oturum Açma GUID"si, bu olayı bir KDC olayıyla ilişkilendirmek için kullanılabilen benzersiz bir tanımlayıcıdır.- Aktarılan Hizmetler, bu oturum açma isteğine katılan ara hizmetleri gösterir.- Paket adı, NTLM protokolleri arasında hangi alt protokolün kullanıldığını gösterir.- Anahtar uzunluğu, oluşturulan oturum anahtarının uzunluğunu gösterir. Oturum anahtarı istenmediyse bu değer 0 olur.      
+occurance      : 1
+update_date    : 2024-04-22 16:00:40.000
+alert_name     : Bir hesapta başarılı bir şekilde oturum açıldı.
+
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+11th before:
+event_id       : b2a5958b3bb34c20ae559e463b163c38
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : EFEM_SERVER-Security (Event Log)-10.1.18.126
+creation_date  : 2024-04-16 12:50:03.000
+node_id        : 3e5452aa6d0c40d98b4af4ee7ce256e8
+subcategory    : Security (Event Log)
+eti_type       : Audit Policy Change
+eti_value      : 13568
+monitor_uuid   : 1342429122
+severity_id    : 10
+information    : Nesnenin denetim ayarları değiştirildi.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:GIZBIL-EFEM$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Nesne:Nesne Sunucusu:SecurityNesne Türü:FileNesne Adı:C:\$WinREAgent\Scratch\Mount\Windows\WinSxS\amd64_microsoft-windows-creddialogcontroller_31bf3856ad364e35_10.0.22621.1_none_8e9a95435707238b\Windows.UI.CredDialogController.dllTanıtıcı Kimliği:0x9f8İşlem Bilgileri:İşlem Kimliği:0x2f8İşlem Adı:C:\Windows\UUS\Packages\Preview\amd64\wuaucltcore.exeDenetim Ayarları:Özgün Güvenlik Tanımlayıcısı:Yeni Güvenlik Tanımlayıcısı:S:ARAI(AU;SAFA;DCLCRPCRSDWDWO;;;WD)   
+occurance      : 2
+update_date    : 2024-04-22 16:01:06.000
+alert_name     : Nesnenin denetim ayarları değiştirildi.
+
+ip             : 10.1.18.126
+dns            :
+mac_address    :
+correlation    :
+
+10th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : BasakKarakas-Security (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : 97a2e291b3d1429d8f85f91b4fa464b5
+subcategory    : Security (Event Log)
+eti_type       : Special Logon
+eti_value      : 12548
+monitor_uuid   : 210358705
+severity_id    : 10
+information    : Yeni oturuma özel ayrıcalıklar atandı.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:SYSTEMHesap Etki Alanı:NT AUTHORITYOturum Açma Kimliği:0x3E7Ayrıcalıklar:SeAssignPrimaryTokenPrivilegeSeTcbPrivilegeSeSecurityPrivilegeSeTakeOwnershipPrivilegeSeLoadDriverPrivilegeSeBackupPrivilegeSeRestorePrivilegeSeDebugPrivilegeSeAuditPrivilegeSeSystemEnvironmentPrivilegeSeImpersonatePrivilegeSeDelegateSessionUserImpersonatePrivilege
+occurance      : 1
+update_date    : 2024-04-22 16:01:22.000
+alert_name     : Yeni oturuma özel ayrıcalıklar atandı.
+
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+9th before:
+event_id       : 080ea651f4a2489594a9fae7824aee98
+status         : OK
+severity       : Normal
+category       : Application
+source         : EFEM_Agent
+node           : Sibel-Application (Event Log)-10.1.18.210
+creation_date  : 2024-04-22 08:32:36.000
+node_id        : bb5977330587451a971479582a7ecc06
+subcategory    : Application (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 1697135007
+severity_id    : 10
+information    : The Software Protection service has successfully installed the license.License Title=Windows(R) UL oob License (Public)License Id=7616836d-59b8-4561-8fc7-46919d146fe1
+occurance      : 2
+update_date    : 2024-04-22 16:01:25.000
+alert_name     : The Software Protection service has successfully installed the license.
+
+ip             : 10.1.18.210
+dns            :
+mac_address    :
+correlation    :
+
+
+8th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Warning
+category       : Microsoft-Windows-Known Folders API Service
+source         : EFEM_Agent
+node           : BasakKarakas-Microsoft-Windows-Known Folders API Service (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : f40854e3efc44825bb3dd738a74f01e3
+subcategory    : Microsoft-Windows-Known Folders API Service (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 210358705
+severity_id    : 20
+information    : "C:\WINDOWS\system32\config\systemprofile\Favorites" yoluna sahip bilinen {1777f761-68ad-4d8a-87bd-30b759fa33dd} klasörü doğrulanırken 0x80070002 hatası oluştu.
+occurance      : 2
+update_date    : 2024-04-22 23:49:47.000
+alert_name     : "C:\WINDOWS\system32\config\systemprofile\Favorites" yoluna sahip bilinen {1777f761-68ad-4d8a-87bd-30b759fa33dd} klasörü doğrulanırken 0x80070002 hatası oluştu.
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+
+7th before:
+event_id       : 70de97b0c77546179f9304a6b5b2383b
+status         : OK
+severity       : Normal
+category       : OneApp_IGCC
+source         : EFEM_Agent
+node           : Sibel-Event Log-10.1.18.210
+creation_date  : 2024-08-15 08:39:15.000
+node_id        : 4692f7b65e0a442091e1702f688e905a
+subcategory    : Event Log
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 1525396824
+severity_id    : 10
+information    : In OnSessionChange: Reason: RemoteConnect
+occurance      : 1
+update_date    : 2024-08-15 09:41:17.000
+alert_name     : In OnSessionChange: Reason: RemoteConnect
+ip             : 10.1.18.210
+dns            :
+mac_address    :
+correlation    :
+
+
+6th before:
+event_id       : b2a5958b3bb34c20ae559e463b163c38
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : EFEM_SERVER-Security (Event Log)-10.1.18.126
+creation_date  : 2024-04-16 12:50:03.000
+node_id        : 3e5452aa6d0c40d98b4af4ee7ce256e8
+subcategory    : Security (Event Log)
+eti_type       : Audit Policy Change
+eti_value      : 13568
+monitor_uuid   : 1342429122
+severity_id    : 10
+information    : Nesnenin denetim ayarları değiştirildi.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:GIZBIL-EFEM$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Nesne:Nesne Sunucusu:SecurityNesne Türü:FileNesne Adı:C:\$WinREAgent\Scratch\Mount\Windows\WinSxS\amd64_windows-staterepository_31bf3856ad364e35_10.0.22621.1_none_5e4621a5bcd5fd49\Windows.StateRepositoryClient.dllTanıtıcı Kimliği:0xa3cİşlem Bilgileri:İşlem Kimliği:0x2f8İşlem Adı:C:\Windows\UUS\Packages\Preview\amd64\wuaucltcore.exeDenetim Ayarları:Özgün Güvenlik Tanımlayıcısı:Yeni Güvenlik Tanımlayıcısı:S:ARAI(AU;SAFA;DCLCRPCRSDWDWO;;;WD)
+occurance      : 2
+update_date    : 2024-04-22 16:00:18.000
+alert_name     : Nesnenin denetim ayarları değiştirildi.
+
+ip             : 10.1.18.126
+dns            :
+mac_address    :
+correlation    :
+
+
+5th before:
+event_id       : 080ea651f4a2489594a9fae7824aee98
+status         : OK
+severity       : Normal
+category       : Application
+source         : EFEM_Agent
+node           : Sibel-Application (Event Log)-10.1.18.210
+creation_date  : 2024-04-22 08:32:36.000
+node_id        : bb5977330587451a971479582a7ecc06
+subcategory    : Application (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 1697135007
+severity_id    : 10
+information    : The Software Protection service has successfully installed the license.License Title=Windows(R) UL store License (Private)License Id=1bae99f2-d7f4-45d1-a967-789f421fd439
+occurance      : 2
+update_date    : 2024-04-22 16:01:07.000
+alert_name     : The Software Protection service has successfully installed the license.
+
+ip             : 10.1.18.210
+dns            :
+mac_address    :
+correlation    :
+
+
+4th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Normal
+category       : Security
+source         : EFEM_Agent
+node           : BasakKarakas-Security (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : 97a2e291b3d1429d8f85f91b4fa464b5
+subcategory    : Security (Event Log)
+eti_type       : Logon
+eti_value      : 12544
+monitor_uuid   : 210358705
+severity_id    : 10
+information    : Bir hesapta başarılı bir şekilde oturum açıldı.Konu:Güvenlik Kimliği:S-1-5-18Hesap Adı:DESKTOP-6GF7IAS$Hesap Etki Alanı:WORKGROUPOturum Açma Kimliği:0x3E7Oturum Açma Bilgileri:Oturum Açma Türü:5Kısıtlanmış Yönetici Modu:-Uzak Credential Guard:-Sanal Hesap:HayırYükseltilmiş Belirteç:EvetKimliğe Bürünme Düzeyi:Kimliğe BürünmeYeni Oturum:Güvenlik Kimliği:S-1-5-18Hesap Adı:SYSTEMHesap Etki Alanı:NT AUTHORITYOturum Açma Kimliği:0x3E7Bağlantılı Oturum Açma Kimliği:0x0Ağ Hesap Adı:-Ağ Hesap Etki Alanı:-Oturum Açma GUID"si:{00000000-0000-0000-0000-000000000000}İşlem Bilgileri:İşlem Kimliği:0x2ecİşlem Adı:C:\Windows\System32\services.exeAğ Bilgileri:İş İstasyonu Adı:-Kaynak Ağ Adresi:-Kaynak Bağlantı Noktası:-Ayrıntılı Kimlik Doğrulama Bilgileri:Oturum Açma İşlemi:Advapi  Kimlik Doğrulama Paketi:NegotiateAktarılan Hizmetler:-Paket Adı (yalnızca NTLM):-Anahtar Uzunluğu:0Bu olay bir oturum açıldığında oluşturulur. Erişilen bilgisayarda oluşturulur.Konu alanları oturum açmayı isteyen yerel sistemdeki hesabı belirtir. Bu genellikle Sunucu hizmeti gibi bir hizmet ya da Winlogon.exe veya Services.exe gibi yerel bir işlemdir.Oturum Türü alanı gerçekleşen oturum açma türünü gösterir. En çok kullanılan türler 2 (etkileşimli) ve 3"tür (ağ).Yeni Oturum alanları adına yeni oturum oluşturulan hesabı, yani oturum açılan hesabı gösterir.Ağ alanları uzaktan oturum açma isteğinin kaynağını gösterir. İş istasyonu adı her zaman yoktur ve bazı durumlarda boş olabilir.Kimliğe bürünme düzeyi alanı oturum açma oturumundaki işlemin kimliğe bürünebilme boyutunu gösterir.Kimlik doğrulama bilgisi alanları bu oturum açma isteğine özel ayrıntılı bilgiler sağlar.- Oturum Açma GUID"si, bu olayı bir KDC olayıyla ilişkilendirmek için kullanılabilen benzersiz bir tanımlayıcıdır.- Aktarılan Hizmetler, bu oturum açma isteğine katılan ara hizmetleri gösterir.- Paket adı, NTLM protokolleri arasında hangi alt protokolün kullanıldığını gösterir.- Anahtar uzunluğu, oluşturulan oturum anahtarının uzunluğunu gösterir. Oturum anahtarı istenmediyse bu değer 0 olur.      
+occurance      : 1
+update_date    : 2024-04-22 16:02:40.000
+alert_name     : Bir hesapta başarılı bir şekilde oturum açıldı.
+
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+3th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Warning
+category       : Microsoft-Windows-Known Folders API Service
+source         : EFEM_Agent
+node           : BasakKarakas-Microsoft-Windows-Known Folders API Service (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : f40854e3efc44825bb3dd738a74f01e3
+subcategory    : Microsoft-Windows-Known Folders API Service (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 210358705
+severity_id    : 20
+information    : "C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools" yoluna sahip bilinen {724ef170-a42d-4fef-9f26-b60e846fba4f} klasörü doğrulanırken 0x80070002 hatası oluştu.
+occurance      : 2
+update_date    : 2024-04-22 23:50:33.000
+alert_name     : "C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Administrative Tools" yoluna sahip bilinen {724ef170-a42d-4fef-9f26-b60e846fba4f} klasörü doğrulanırken 0x80070002 hatası oluştu.
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+2th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Warning
+category       : Microsoft-Windows-Known Folders API Service
+source         : EFEM_Agent
+node           : BasakKarakas-Microsoft-Windows-Known Folders API Service (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : f40854e3efc44825bb3dd738a74f01e3
+subcategory    : Microsoft-Windows-Known Folders API Service (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 210358705
+severity_id    : 20
+information    : "C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" yoluna sahip bilinen {b97d20bb-f46a-4c97-ba10-5e3608430854} klasörü doğrulanırken 0x80070002 hatası oluştu.
+occurance      : 1
+update_date    : 2024-04-22 23:50:37.000
+alert_name     : "C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" yoluna sahip bilinen {b97d20bb-f46a-4c97-ba10-5e3608430854} klasörü doğrulanırken 0x80070002 hatası oluştu.
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+1th before:
+event_id       : 10ac8083601e4787bf2d6fc13bc84a64
+status         : OK
+severity       : Normal
+category       : OAlerts
+source         : EFEM_Agent
+node           : BasakKarakas-OAlerts (Event Log)-10.1.18.86
+creation_date  : 2024-04-04 10:37:00.000
+node_id        : e10a7ac0f9d34d9b900c7268b51488eb
+subcategory    : OAlerts (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 210358705
+severity_id    : 10
+information    : Microsoft WordGeçerli belgede güncelleştirilecek içindekiler tablosu yok. Başvurular sekmesinden bir tablo ekleyebilirsiniz.P1: 200103P2: 16.0.4266.1001P3: ivanP4: 0x80070002
+occurance      : 1
+update_date    : 2024-04-22 23:51:45.000
+alert_name     : Microsoft Word
+ip             : 10.1.18.86
+dns            :
+mac_address    :
+correlation    :
+
+
+--- Current PROBLEM Row ---
+event_id       : b2a5958b3bb34c20ae559e463b163c38
+status         : PROBLEM
+severity       : Minor
+category       : System
+source         : EFEM_Agent
+node           : EFEM_SERVER-System (Event Log)-10.1.18.126
+creation_date  : 2024-04-16 12:50:03.000
+node_id        : f8d90d7ba4484f73baa78e4196699056
+subcategory    : System (Event Log)
+eti_type       :
+eti_value      : 0
+monitor_uuid   : 1342429122
+severity_id    : 30
+information    : netprofm hizmet şu hata ile sona erdi: Aygıt hazır değil.
+occurance      : 1
+update_date    : 2024-04-22 23:51:49.000
+alert_name     : netprofm hizmet şu hata ile sona erdi:
+
+ip             : 10.1.18.126
+dns            :
+mac_address    :
+correlation    :

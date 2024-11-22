@@ -1,10 +1,13 @@
 import csv
+from collections import deque
 
 '''
 0-Normal
 1-Warning
 2-Unknown
 3-Minor
+
+Status OK 
 '''
 def read_rows_readable_with_headers(file_name='history.csv',linenumber = 10):
     headers = [
@@ -31,7 +34,7 @@ def read_rows_readable_with_headers(file_name='history.csv',linenumber = 10):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-read_rows_readable_with_headers()
+#read_rows_readable_with_headers()
 
 
 def extract_unique_severity(input_file='history.csv', limit=100):
@@ -108,3 +111,34 @@ def extract_unknown_severity(input_file='history.csv'):
     except Exception as e:
         print(f"An error occurred: {e}")
         return None
+
+
+def read_first_problem_context(file_name):
+    with open(file_name, mode='r', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        rows = list(reader)
+
+        # Find the first 'PROBLEM' row and get the 15 rows before it
+        for i, row in enumerate(rows):
+            if row['status'] == 'PROBLEM':
+                start_index = max(0, i - 15)
+                context_rows = rows[start_index:i]
+                
+                # Print context rows
+                print("\n--- CONTEXT (Last 15 Rows Before the First PROBLEM) ---")
+                for j, context_row in enumerate(reversed(context_rows), start=1):
+                    print(f"\n{j}th before:")
+                    print(format_row(context_row))
+                
+                # Print the PROBLEM row
+                print("\n--- Current PROBLEM Row ---")
+                print(format_row(row))
+                
+                return  # Stop after finding the first 'PROBLEM' row
+
+def format_row(row):
+    """Formats a single row dictionary for better readability."""
+    return "\n".join(f"{key:15}: {value}" for key, value in row.items())
+
+# Replace 'history.csv' with your CSV file name
+read_first_problem_context('history.csv')
