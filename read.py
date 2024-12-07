@@ -83,7 +83,7 @@ if severities is not None:
         print(f"Information: {information}")
 '''
 
-def extract_unknown_severity(input_file='history.csv'):
+def extract_unknown_severity(input_file='history2.csv'):
     unknown_rows = []
     
     try:
