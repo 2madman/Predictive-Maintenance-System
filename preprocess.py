@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def sample_and_preprocess_csv(input_filepath, output_filepath, sample_size=50000, random_state=42):
+def sample_and_preprocess_csv(input_filepath, output_filepath, sample_size=300000, random_state=42):
     """
     Sample and preprocess a large CSV file
     
@@ -24,7 +24,7 @@ def sample_and_preprocess_csv(input_filepath, output_filepath, sample_size=50000
     essential_columns = [
         'event_id', 'status', 'severity', 'category', 'source', 
         'creation_date', 'node_id', 'subcategory', 'eti_type', 
-        'eti_value', 'monitor_uuid', 'severity_id', 'occurance'
+        'eti_value', 'monitor_uuid', 'severity_id', 'occurance','information'
     ]
     
     # Keep only essential columns and drop rows with missing status
@@ -44,12 +44,14 @@ def sample_and_preprocess_csv(input_filepath, output_filepath, sample_size=50000
     for col in categorical_columns:
         df_sampled[col] = df_sampled[col].astype('category')
     
+    '''
     # Convert date column
     df_sampled['creation_date'] = pd.to_datetime(df_sampled['creation_date'])
     
     # Extract additional features from date
     df_sampled['month'] = df_sampled['creation_date'].dt.month
     df_sampled['day_of_week'] = df_sampled['creation_date'].dt.dayofweek
+    '''
     
     # Save the processed sample
     df_sampled.to_csv(output_filepath, index=False)
@@ -64,7 +66,7 @@ def sample_and_preprocess_csv(input_filepath, output_filepath, sample_size=50000
 
 def main():
     input_file = 'history.csv'
-    output_file = 'history2.csv'
+    output_file = 'history5.csv'
     
     sample_and_preprocess_csv(input_file, output_file)
 

@@ -197,7 +197,7 @@ class EventStatusPredictor:
 
 def main():
     # File paths
-    training_csv = 'history2.csv'
+    training_csv = 'preprocessed.csv'
     
     # Initialize predictor
     predictor = EventStatusPredictor()
@@ -206,7 +206,7 @@ def main():
     predictor.train(training_csv)
     
     # Save the model
-    predictor.save_model('event_status_model.pkl')
+    predictor.save_model('event_status_model3.pkl')
     
     # Optional: Demonstrate prediction
     # Load the first few rows of the training data for prediction
