@@ -10,7 +10,7 @@ class MonitoringPredictor:
     def __init__(self, root):
         self.root = root
         self.root.title("Event Status Predictor & Pattern Monitor")
-        self.root.geometry("1400x600")
+        self.root.geometry("1500x600")
         
         # Initialize predictor
         self.predictor = EventStatusPredictor()
@@ -40,7 +40,7 @@ class MonitoringPredictor:
         ttk.Label(left_frame, text="Event Monitoring:", font=('Arial', 12, 'bold')).grid(row=0, column=0, sticky=tk.W)
         
         # Create text widget with scrollbar for predictions
-        self.result_text = tk.Text(left_frame, height=30, width=70)
+        self.result_text = tk.Text(left_frame, height=30, width=100)
         left_scrollbar = ttk.Scrollbar(left_frame, orient='vertical', command=self.result_text.yview)
         self.result_text.configure(yscrollcommand=left_scrollbar.set)
         
@@ -74,37 +74,67 @@ class MonitoringPredictor:
     def check_pattern(self, new_record):
         """
         Check for patterns as each new record arrives
+        Returns: (pattern_found: bool, pattern_type: str or None)
         """
         # Add new record to rolling window
         self.recent_logs.append(new_record)
         
-        # Only check pattern if we have 3 records
-        if len(self.recent_logs) == 3:
-            monitored_severities = {'Warning', 'Minor', 'Unknown'}
-            # Check if all recent logs have monitored severities
-            if all(log['severity'] in monitored_severities for log in self.recent_logs):
-                return True
-        return False
+        # Only check pattern if we have at least 2 records
+        if len(self.recent_logs) >= 2:
+            # Check for Unknown after Warning/Minor pattern
+            last_record = self.recent_logs[-1]
+            previous_record = self.recent_logs[-2]
+            
+            if (last_record['severity'] == 'Unknown' and 
+                previous_record['severity'] in {'Warning', 'Minor'}):
+                return True, 'unknown_after_alert'
+            
+            # Original pattern check (if we have 3 records)
+            if len(self.recent_logs) == 3:
+                monitored_severities = {'Warning', 'Minor', 'Unknown'}
+                if all(log['severity'] in monitored_severities for log in self.recent_logs):
+                    return True, 'three_consecutive'
+                    
+        return False, None
+
+    def show_unknown_after_alert_popup(self, current_record, previous_record):
+        """
+        Show a popup message when Unknown severity follows Warning/Minor
+        """
+        message = f"Alert: Unknown Status After {previous_record['severity']}!\n\n"
+        message += f"Previous Event: {previous_record['severity']}\n"
+        message += f"Current Event: Unknown\n\n"
+        message += f"Information: {current_record.get('information', 'No additional information available')}"
+        
+        messagebox.showwarning("Pattern Alert", message, icon='warning')
 
     def update_pattern_display(self, new_record):
         """
         Update pattern detection display with new record
         """
         # Check for pattern with new record
-        pattern_detected = self.check_pattern(new_record)
+        pattern_detected, pattern_type = self.check_pattern(new_record)
         
         if pattern_detected:
             # Get current timestamp
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             
             self.pattern_text.insert(tk.END, f"\n[{timestamp}] ", 'timestamp')
-            self.pattern_text.insert(tk.END, "Pattern Detected!\n", 'warning')
-            self.pattern_text.insert(tk.END, "Last 3 logs showing concerning pattern:\n")
             
-            for log in self.recent_logs:
-                self.pattern_text.insert(tk.END, f"- Severity: {log['severity']}\n")
-                self.pattern_text.insert(tk.END, f"  Category: {log['category']}\n")
-                self.pattern_text.insert(tk.END, f"  Time: {log['creation_date']}\n")
+            if pattern_type == 'unknown_after_alert':
+                self.pattern_text.insert(tk.END, "Unknown Status After Alert Pattern Detected!\n", 'warning')
+                self.pattern_text.insert(tk.END, f"Previous: {self.recent_logs[-2]['severity']}\n")
+                self.pattern_text.insert(tk.END, f"Current: Unknown\n")
+                # Show popup for this specific pattern
+                self.show_unknown_after_alert_popup(self.recent_logs[-1], self.recent_logs[-2])
+            else:  # three_consecutive pattern
+                self.pattern_text.insert(tk.END, "Three Consecutive Alert Pattern Detected!\n", 'warning')
+                self.pattern_text.insert(tk.END, "Last 3 logs showing concerning pattern:\n")
+                
+                for log in self.recent_logs:
+                    self.pattern_text.insert(tk.END, f"- Severity: {log['severity']}\n")
+                    self.pattern_text.insert(tk.END, f"  Category: {log['category']}\n")
+                    self.pattern_text.insert(tk.END, f"  Time: {log['creation_date']}\n")
             
             self.pattern_text.insert(tk.END, "\n")
             self.pattern_text.see(tk.END)
@@ -179,7 +209,7 @@ class MonitoringPredictor:
                 self.result_text.insert(tk.END, f"{prediction}\n\n", 'ok')
                 # Schedule next prediction immediately for non-problem cases
                 self.current_index += 1
-                self.root.after(1, self.predict_next)
+                self.root.after(300, self.predict_next)
             
             self.result_text.see(tk.END)
             

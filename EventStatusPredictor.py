@@ -197,7 +197,7 @@ class EventStatusPredictor:
 
 def main():
     # File paths
-    training_csv = 'preprocessed.csv'
+    training_csv = 'preprocessed2.csv'
     
     # Initialize predictor
     predictor = EventStatusPredictor()
@@ -212,7 +212,6 @@ def main():
     # Load the first few rows of the training data for prediction
     sample_data = pd.read_csv(training_csv).drop('status', axis=1).head(220)
     predictions = predictor.predict(sample_data)
-    print("\nSample Predictions:", predictions)
 
 if __name__ == "__main__":
     main()
